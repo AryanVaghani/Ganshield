@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# 🛡️ GANSHIELD 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, high-end cybersecurity landing page and authentication system built with **React 19**, **TypeScript**, and **Framer Motion**.
 
-Currently, two official plugins are available:
+![GANSHIELD Banner](https://img.shields.io/badge/Security-Advanced-00f0ff?style=for-the-badge&logo=shield)
+![Tech Stack](https://img.shields.io/badge/Built%20with-React%20%2B%20Vite%20%2B%20Tailwind-blueviolet?style=for-the-badge)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## React Compiler
+### 1. **Cinematic Hero Section**
+- **3D Animated Shield**: A pure CSS/JS 3D shield that floats, glows, and responds to depth.
+- **Continuous 360° Rotation**: The shield smoothly spins on its Y-axis (one full revolution every 12 seconds).
+- **Mouse-Follow Parallax**: The shield tilts dynamically toward your cursor using spring-based physics.
+- **Orbiting Security Icons**: 7 unique security icons (Lock, Alert, CPU, etc.) orbit the shield in 3D space.
+- **Perspective Grid Floor**: A moving grid beneath the shield creates a sense of vast, digital space.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. **Dashboard-Style Feature Sections**
+- **Feature Matrix**: A 2x3 grid of glassmorphic cards showcasing core capabilities like "24/7 Threat Monitoring" and "Zero-Latency Response".
+- **Social Proof & Stats**: High-fidelity cards showing success metrics (98.5% Threat Neutralization) and a "Trusted by Industry Leaders" brand showcase.
 
-## Expanding the ESLint configuration
+### 3. **Modern Navigation**
+- **Floating Pill Navbar**: A multi-capsule layout with separate glass pills for the Logo, Navigation Links, and "Get Demo" CTA.
+- **Adaptive Glassmorphism**: High-blur background effects that respond to scroll.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 4. **Secure Authentication**
+- **Glassmorphic Auth Form**: A beautiful, animated login/signup system with real-time field validation and interactive backgrounds.
+- **ClickSpark Effect**: Interactive particles that ignite upon mouse clicks across the background.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Framework**: React 19 (Strict Mode)
+- **Styling**: TailwindCSS 4 + Vanilla CSS for 3D Transforms
+- **Animations**: Framer Motion 12 (Springs, AnimatePresence, useTransform)
+- **Icons**: Lucide React
+- **Build Tool**: Vite 7
+- **Routing**: React Router 7
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/AryanVaghani/Ganshield.git
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. **Run the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Navigate to**: `http://localhost:5173`
+
+## 📂 Project Structure
+
+- `src/components/` - All UI components (Shield3D, FeaturesGrid, etc.)
+- `src/pages/` - Main page views (LandingPage, AuthPage)
+- `src/App.tsx` - App routing and global configuration
+
+---
+
+Developed with ❤️ for high-end cybersecurity visualization.
