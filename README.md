@@ -196,8 +196,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-Made with ❤️ by **[Aryan Vaghani](https://github.com/AryanVaghani)**
-
 ⭐ Star this repo if you find it useful!
 
 </div>
