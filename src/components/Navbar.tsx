@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, ArrowRight, Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { ShieldCheck, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const location = useLocation();
 
     const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'Products', path: '#products' },
-        { name: 'Value', path: '#value' },
-        { name: 'FAQs', path: '#faqs' },
-        { name: 'Careers', path: '#careers' },
+        { name: 'Dashboard', path: '/dashboard' },
+        { name: 'Home', path: '/' }
     ];
 
     return (
@@ -22,13 +18,13 @@ export const Navbar: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2, type: 'spring', stiffness: 120, damping: 20 }}
             className="fixed top-6 left-0 right-0 z-50 px-4"
         >
-            <div className="max-w-6xl mx-auto flex items-center justify-between">
+            <div className="w-full mx-auto flex items-center justify-between">
 
                 {/* Logo - Independent Pill (Left) */}
-                <Link to="/" className="flex items-center gap-2 group px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 hover:border-[var(--color-neon-blue)]/50 transition-all duration-300">
-                    <ShieldCheck className="text-[var(--color-neon-blue)] w-6 h-6 drop-shadow-[0_0_10px_rgba(0,240,255,0.5)]" />
-                    <span className="text-lg font-bold font-mono tracking-wider text-white">
-                        GANSHIELD
+                <Link to="/" className="flex items-center gap-2 group px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 hover:border-primary/50 transition-all duration-300">
+                    <ShieldCheck className="text-primary w-6 h-6 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]" />
+                    <span className="text-lg font-bold font-mono tracking-wider text-primary">
+                    GANSHIELD
                     </span>
                 </Link>
 
@@ -48,12 +44,12 @@ export const Navbar: React.FC = () => {
                 </div>
 
                 {/* CTA Button - Independent Pill (Right) */}
-                <div className="hidden md:block">
+                <div className="hidden md:flex items-center gap-4">
                     <Link to="/auth">
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-[var(--color-neon-blue)] text-black px-6 py-2.5 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 shadow-[0_0_15px_rgba(0,240,200,0.3)] hover:shadow-[0_0_25px_rgba(0,240,200,0.5)] transition-all"
+                            className="bg-white text-black px-6 py-2.5 rounded-full font-bold text-sm tracking-wide flex items-center gap-2 hover:bg-zinc-200 transition-colors"
                         >
                             Get Demo
                         </motion.button>
@@ -63,7 +59,7 @@ export const Navbar: React.FC = () => {
                 {/* Mobile Menu Toggle */}
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="md:hidden p-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white hover:text-[var(--color-neon-blue)] transition-colors"
+                    className="md:hidden p-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white hover:text-primary transition-colors"
                 >
                     {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
@@ -83,14 +79,14 @@ export const Navbar: React.FC = () => {
                                 key={link.name}
                                 to={link.path}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="text-lg font-medium text-gray-300 hover:text-[var(--color-neon-blue)] hover:pl-2 transition-all"
+                                className="text-lg font-medium text-gray-300 hover:text-primary hover:pl-2 transition-all"
                             >
                                 {link.name}
                             </Link>
                         ))}
                         <div className="h-px bg-white/10 my-2" />
                         <Link to="/auth" onClick={() => setIsMenuOpen(false)}>
-                            <button className="w-full bg-[var(--color-neon-blue)] text-black py-3 rounded-xl font-bold text-sm uppercase tracking-wide">
+                            <button className="w-full bg-white text-black hover:bg-zinc-200 transition-colors py-3 mt-4 rounded-xl font-bold text-sm uppercase tracking-wide">
                                 Get Demo
                             </button>
                         </Link>

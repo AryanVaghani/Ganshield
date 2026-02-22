@@ -1,26 +1,27 @@
-import { Background } from '../components/Background';
 import { AuthForm } from '../components/AuthForm';
 import ClickSpark from '../components/ClickSpark';
+import FlowFieldBackground from '@/components/ui/flow-field-background';
 
 export const AuthPage = () => {
     return (
-        <div className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-            {/* ClickSpark wraps the background area. z-0 ensures it's behind the AuthForm which is z-10 */}
+        <div className="relative min-h-screen pt-24 pb-12 flex items-center justify-center text-white overflow-hidden">
+            {/* Flow Field Background — interactive particle canvas */}
             <ClickSpark
-                sparkColor='#00f0ff'
+                sparkColor='#e78a53'
                 sparkSize={10}
                 sparkRadius={20}
                 sparkCount={8}
                 duration={400}
                 className="absolute inset-0 z-0"
             >
-                <Background />
+                <FlowFieldBackground
+                    color="#d4a060"
+                    trailOpacity={0.08}
+                    speed={0.6}
+                    particleCount={400}
+                />
             </ClickSpark>
 
-            {/* AuthForm has relative z-10 in its own component definition, so it sits on top. 
-          Clicks on AuthForm will naturally not trigger ClickSpark's onClick because they bubble,
-          BUT ClickSpark is a sibling (wrapping Background) but visually behind.
-      */}
             <AuthForm />
         </div>
     );

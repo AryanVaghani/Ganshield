@@ -12,13 +12,12 @@ export const GridFloor: React.FC = () => {
                 `}
             </style>
 
-            {/* The Grid Plane */}
             <div
                 className="absolute inset-x-[-50%] bottom-[-50%] h-[200%] w-[200%]"
                 style={{
                     background: `
-                        linear-gradient(transparent 0%, rgba(0, 240, 255, 0.1) 1px, transparent 2px),
-                        linear-gradient(90deg, transparent 0%, rgba(0, 240, 255, 0.1) 1px, transparent 2px)
+                        linear-gradient(transparent 0%, rgba(231, 138, 83, 0.06) 1px, transparent 2px),
+                        linear-gradient(90deg, transparent 0%, rgba(212, 160, 96, 0.06) 1px, transparent 2px)
                     `,
                     backgroundSize: '50px 50px',
                     transform: 'rotateX(60deg)',
@@ -29,8 +28,7 @@ export const GridFloor: React.FC = () => {
                 }}
             />
 
-            {/* Radial Glow at bottom center */}
-            <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[var(--color-neon-blue)] rounded-full blur-[120px] opacity-10" />
+            <div className="absolute bottom-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full blur-[120px] opacity-[0.06]" style={{ backgroundColor: '#e78a53' }} />
         </div>
     );
 };
