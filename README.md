@@ -1,122 +1,203 @@
-# GANSHIELD
+<div align="center">
 
-**Next-generation AI-powered cybersecurity platform.** A premium React SPA with a real-time threat dashboard, animated landing experience, and interactive UI components.
+<img src="https://img.shields.io/badge/GanShield-Cyber%20Security%20Intelligence-00f0ff?style=for-the-badge&logo=shield&logoColor=white" alt="GanShield Banner"/>
+
+# 🛡️ GanShield
+
+### AI-Powered Intrusion Detection System Dashboard
+
+[![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.18-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.34.0-FF0055?style=flat-square&logo=framer&logoColor=white)](https://www.framer.com/motion/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+
+</div>
 
 ---
 
-## Stack
+## 📌 Overview
 
-| Layer | Technology |
-|-------|-----------|
-| Framework | React 19 + TypeScript |
-| Build | Vite 7 |
-| Styling | Tailwind CSS 4 |
-| Animation | Framer Motion 12 |
-| Charts | Recharts |
-| Icons | Lucide React |
-| Routing | React Router DOM 7 |
+**GanShield** is a modern, dark-themed **Cyber Security Intelligence** web application built with React and TypeScript. It features an AI-powered intrusion detection dashboard with real-time threat monitoring, beautiful animations, and a premium dark UI with neon accents.
+
+> 🔐 Built for network security analysts who need fast, visual, and intelligent threat detection.
 
 ---
 
-## Getting Started
+## ✨ Features
+
+- 🌑 **Dark Mode UI** with cyan/neon accent palette
+- 🎞️ **Smooth Animations** powered by Framer Motion
+- 🔐 **Auth Flow** — Login & Sign-up with animated transitions
+- 📊 **Analytics Dashboard** with real-time charts (Recharts)
+- 🌐 **Landing Page** with hero section, feature grid, social proof & footer
+- 💫 **Micro-animations** — Spinning Shield, Glowing Effects, Display Cards, Text Scramble
+- ⚡ **Blazing Fast** — Vite dev server with HMR
+- 📱 **Fully Responsive** layout
+
+---
+
+## 🧰 Tech Stack
+
+| Category | Technology | Version |
+|---|---|---|
+| **Framework** | React | `^19.2.0` |
+| **Language** | TypeScript | `~5.9.3` |
+| **Build Tool** | Vite | `^7.3.1` |
+| **Styling** | TailwindCSS | `^4.1.18` |
+| **Animations** | Framer Motion | `^12.34.0` |
+| **Routing** | React Router DOM | `^7.13.0` |
+| **Charts** | Recharts | `^3.7.0` |
+| **Icons** | Lucide React | `^0.564.0` |
+| **Utilities** | clsx + tailwind-merge | `^2.1.1` / `^3.5.0` |
+| **Linting** | ESLint + TypeScript ESLint | `^9.39.1` / `^8.48.0` |
+
+---
+
+## 📁 Project Structure
+
+```
+ganshield/
+├── public/                   # Static assets
+├── src/
+│   ├── components/           # Reusable UI components
+│   │   ├── AuthForm.tsx          # Login/Sign-up form
+│   │   ├── Background.tsx        # Animated background
+│   │   ├── DisplayCardsSection.tsx
+│   │   ├── FeaturesGrid.tsx      # Feature cards grid
+│   │   ├── Footer.tsx
+│   │   ├── GridFloor.tsx         # 3D grid floor effect
+│   │   ├── HeroSection.tsx       # Landing hero
+│   │   ├── Navbar.tsx
+│   │   ├── SocialProof.tsx
+│   │   ├── SpinningShield.tsx    # Animated 3D shield
+│   │   └── ui/                   # Low-level UI primitives
+│   │       ├── display-cards.tsx
+│   │       ├── flow-field-background.tsx
+│   │       ├── glowing-effect.tsx
+│   │       ├── material-design-3-ripple.tsx
+│   │       └── text-scramble.tsx
+│   ├── lib/
+│   │   └── utils.ts              # Shared utility functions
+│   ├── pages/
+│   │   ├── AuthPage.tsx          # Auth page (login/signup)
+│   │   ├── Dashboard.tsx         # Main analytics dashboard
+│   │   └── LandingPage.tsx       # Public landing page
+│   ├── App.tsx                   # Root component + routing
+│   ├── main.tsx                  # Entry point
+│   └── index.css                 # Global styles
+├── index.html
+├── vite.config.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tailwind.config.ts
+└── package.json
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** `>= 18.x` — [Download](https://nodejs.org/)
+- **npm** `>= 9.x` *(comes with Node.js)*
+- **Git** — [Download](https://git-scm.com/)
+
+> ⚠️ **Windows users:** If `npm` commands fail in PowerShell, run this once:
+> ```powershell
+> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+> ```
+
+---
+
+### 🔧 Installation
+
+**1. Clone the repository**
 
 ```bash
-# Install dependencies
+git clone https://github.com/AryanVaghani/Ganshield.git
+cd Ganshield
+```
+
+**2. Install dependencies**
+
+```bash
 npm install
+```
 
-# Start dev server
+---
+
+### 🖥️ Running the App
+
+```bash
 npm run dev
+```
 
-# Production build
+The app will be available at **[http://localhost:5173](http://localhost:5173)**
+
+---
+
+## 📜 Available Scripts
+
+| Script | Command | Description |
+|---|---|---|
+| **Dev Server** | `npm run dev` | Start local development server with HMR |
+| **Build** | `npm run build` | Compile TypeScript + bundle for production |
+| **Preview** | `npm run preview` | Preview the production build locally |
+| **Lint** | `npm run lint` | Run ESLint checks |
+
+---
+
+## 🏗️ Production Build
+
+```bash
 npm run build
+```
 
-# Preview production build
+Output will be in the `dist/` folder. You can serve it with any static host (Vercel, Netlify, GitHub Pages, etc.)
+
+To preview the build locally:
+
+```bash
 npm run preview
 ```
 
-Dev server runs at **http://localhost:5173/**
+---
+
+## 🌐 Deployment
+
+This project is ready to deploy on:
+
+- **[Vercel](https://vercel.com)** — Just import the GitHub repo, no config needed
+- **[Netlify](https://netlify.com)** — Connect repo and set build command to `npm run build`
+- **[GitHub Pages](https://pages.github.com)** — Use `vite-plugin-gh-pages`
 
 ---
 
-## Project Structure
+## 🤝 Contributing
 
-```
-src/
-├── components/
-│   ├── ui/                    # Reusable UI primitives
-│   │   ├── glowing-effect.tsx       # Mouse-tracking glow border
-│   │   ├── display-cards.tsx        # Stacked hover-reveal cards
-│   │   ├── text-scramble.tsx        # Cyberpunk character shuffle text
-│   │   ├── flow-field-background.tsx # Interactive particle canvas
-│   │   └── material-design-3-ripple.tsx # MD3 physics ripple
-│   ├── AuthForm.tsx           # Login / Sign-up form
-│   ├── Background.tsx         # Warm particle network background
-│   ├── ClickSpark.tsx         # Click spark burst effect
-│   ├── DisplayCardsSection.tsx # Landing page stacked cards section
-│   ├── FeaturesGrid.tsx       # Features with GlowingEffect cards
-│   ├── Footer.tsx             # Site footer
-│   ├── GridFloor.tsx          # Animated perspective grid
-│   ├── HeroSection.tsx        # Homepage hero with TextScramble
-│   ├── Input.tsx              # Custom styled input field
-│   ├── Navbar.tsx             # Fixed pill-style navigation
-│   ├── SocialProof.tsx        # Social proof stats + trusted brands
-│   └── SpinningShield.tsx     # 3D animated shield with live stats
-├── lib/
-│   └── utils.ts               # cn() class utility (clsx + tailwind-merge)
-├── pages/
-│   ├── AuthPage.tsx           # Login page with FlowFieldBackground
-│   ├── Dashboard.tsx          # Live threat monitoring dashboard
-│   └── LandingPage.tsx        # Marketing homepage
-├── App.tsx
-├── App.css
-└── index.css                  # Global CSS + Tailwind tokens
-```
+1. Fork the repo
+2. Create your feature branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m "Add my feature"`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Open a Pull Request
 
 ---
 
-## Pages
+## 📄 License
 
-### `/` — Landing Page
-- Animated hero with spinning shield and TextScramble headline
-- Feature cards with GlowingEffect (mouse-tracking glow borders)
-- DisplayCards — stacked cybersecurity intel cards
-- Social proof stats and trusted brands
-- Animated footer
-
-### `/auth` — Authentication
-- Login / Sign-up toggle with animated transition
-- FlowFieldBackground — interactive particle flow canvas
-- ClickSpark effects on interaction
-
-### `/dashboard` — Command Center
-- Live DEFCON status badge with blinking alarm animation
-- 4 animated KPI cards (Defend Rate, AI Mitigation, Active Alerts, Nodes)
-- 24h traffic + threat volume area chart
-- Attack vector analysis bar chart
-- Geographic distribution pie chart
-- Live interception event log terminal
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Design System
+<div align="center">
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--primary` | `#e78a53` | Brand orange — all accents, CTAs |
-| `--background` | `#121113` | Page background |
-| `--card` | `#121212` | Card backgrounds |
-| `--border` | `#222222` | All borders |
-| Emerald | `#10b981` | Safe / success states |
-| Rose | `#ef4444` | Danger / alert states |
-| Amber | `#f59e0b` | Warning states |
+Made with ❤️ by **[Aryan Vaghani](https://github.com/AryanVaghani)**
 
----
+⭐ Star this repo if you find it useful!
 
-## Path Aliases
-
-`@/` resolves to `./src/` — configured in both `vite.config.ts` and `tsconfig.app.json`.
-
-```ts
-import { cn } from '@/lib/utils'
-import { GlowingEffect } from '@/components/ui/glowing-effect'
-```
+</div>
